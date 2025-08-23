@@ -1,0 +1,25 @@
+{
+  "name": "bbc-track-scraper",
+  "version": "1.0.0",
+  "description": "Scrapes BBC Sounds tracklists and stores in SQLite",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "cli": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cheerio": "^1.1.2",
+    "commander": "^11.0.0",
+    "p-retry": "^6.2.1",
+    "reflect-metadata": "^0.1.13",
+    "sqlite3": "^5.1.6",
+    "typeorm": "^0.3.17"
+  },
+  "devDependencies": {
+    "@types/node": "^18.18.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.3"
+  }
+}
