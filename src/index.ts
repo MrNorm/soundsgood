@@ -11,7 +11,7 @@ const program = new Command();
 
 program
   .name("bbc-track-scraper")
-  .description("Scrapes BBC Radio 1 Danny Howard episode tracklists")
+  .description("Scrapes BBC Sounds episode tracklists")
   .version("1.0.0");
 
 program
