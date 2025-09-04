@@ -72,8 +72,11 @@ program
       console.log(`${episode.summary}`);
       console.log("\nTracklist:");
       episode.tracks.forEach((track, i) => {
+        const searchTerm = encodeURIComponent(`${track.artist} - ${track.title}`);
+        const traxsourceUrl = `https://www.traxsource.com/search?term=${searchTerm}`;
         console.log(`${i + 1}. ${track.artist} — ${track.title}`);
         if (track.url) console.log(`   🎵 ${track.url}`);
+        console.log(`   🔎 Traxsource: ${traxsourceUrl}`);
       });
     } else {
       const episodes = await repo.find({ relations: { tracks: true } });
@@ -86,8 +89,11 @@ program
         console.log(`${episode.summary}`);
         console.log("\nTracklist:");
         episode.tracks.forEach((track, i) => {
+          const searchTerm = encodeURIComponent(`${track.artist} - ${track.title}`);
+          const traxsourceUrl = `https://www.traxsource.com/search?term=${searchTerm}`;
           console.log(`${i + 1}. ${track.artist} — ${track.title}`);
           if (track.url) console.log(`   🎵 ${track.url}`);
+          console.log(`   🔎 Traxsource: ${traxsourceUrl}`);
         });
         console.log("\n-----------------------------");
       });
